@@ -15,7 +15,7 @@ COMiC_bool COMiC_IsInited(void);
 
 void COMiC_Finalize(void);
 
-int COMiC_Instance_Init(COMiC_Instance *storage, COMiC_size max_heap_size);
+int COMiC_Instance_Init(COMiC_Instance *storage, COMiC_usize max_heap_size);
 
 COMiC_Instance *COMiC_Instance_GetCurrent(void);
 

@@ -2,7 +2,7 @@
 #include <COMiC/os.h>
 #include <COMiC/env.h>
 
-static COMiC_bool is_inited = 0;
+static COMiC_bool is_inited = COMiC_FALSE;
 
 int COMiC_Init(void)
 {
@@ -10,6 +10,8 @@ int COMiC_Init(void)
     {
         return -1;
     }
+
+    is_inited = COMiC_TRUE;
     return 0;
 }
 
@@ -21,4 +23,5 @@ COMiC_bool COMiC_IsInited(void)
 void COMiC_Finalize(void)
 {
     _COMiC_OS_Finalize();
+    is_inited = COMiC_FALSE;
 }

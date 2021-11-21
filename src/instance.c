@@ -2,7 +2,7 @@
 #include <COMiC/env.h>
 
 
-int COMiC_Instance_Init(COMiC_Instance *storage, COMiC_size max_heap_size)
+int COMiC_Instance_Init(COMiC_Instance *storage, COMiC_usize max_heap_size)
 {
     if (_COMiC_OS_Instance_Init(&(storage->os_storage), max_heap_size))
     {
